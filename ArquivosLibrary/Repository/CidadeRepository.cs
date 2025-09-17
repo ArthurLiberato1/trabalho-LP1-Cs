@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace ArquivosLibrary.Repository
 {
-    internal class CidadeRepository
+    public class CidadeRepository
     {
         private readonly DbContext _dbContext;
 
-        public async Task<bool> ImportarAsync(Cidade cidade)
+        public async Task<bool> AdicionarAsync(Cidade cidade)
         {
             try
             {
@@ -69,11 +69,11 @@ namespace ArquivosLibrary.Repository
             }
         }
 
-        public async Task<IEnumerable<String>> ObterTodosUF()
+        public async Task<IEnumerable<string>> ObterTodosUF()
         {
             try
             {
-                List<String> UFs = new List<String>();
+                List<string> UFs = new List<string>();
                 await using var con = await _dbContext.GetConnectionAsync();
                 await using var cmd = con.CreateCommand();
                 cmd.CommandText = "select distinct Sigla from Cidade";
@@ -124,6 +124,39 @@ namespace ArquivosLibrary.Repository
             }
         }
 
+        public async Task<Cidade?> ObterCidadesPorUfAsync(string Sigla)
+        {
+            try
+            {
+                List<Cidade> cidades = new List<Cidade>();
+
+                await using var con = await _dbContext.GetConnectionAsync();
+                await using var cmd = con.CreateCommand();
+                cmd.CommandText = "select * from Cidade where Sigla = " + Sigla;
+
+                await using var dr = await cmd.ExecuteReaderAsync();
+
+                while (await dr.ReadAsync())
+                {
+                    var cidade = new Cidade();
+                    cidade.CidadeId = (int)dr["CidadeId"];
+                    cidade.Nome = dr["Nome"].ToString();
+                    cidade.Sigla = dr["Sigla"].ToString();
+                    cidade.IBGEMunicipio = (int)dr["IBGEMunicipio"];
+                    cidade.Longitude = dr["Longitude"].ToString();
+                    cidade.Latitude = dr["Latitude"].ToString();
+
+
+                    cidades.Add(cidade);
+                }
+
+                return cidades;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
 
     }
 }
