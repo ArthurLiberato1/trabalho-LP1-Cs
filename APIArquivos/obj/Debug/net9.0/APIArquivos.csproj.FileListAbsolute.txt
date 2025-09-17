@@ -212,3 +212,7 @@ C:\Users\Aluno\Downloads\APIArquivos\APIArquivos\APIArquivos\obj\Debug\net9.0\AP
 C:\Users\Aluno\Downloads\APIArquivos\APIArquivos\APIArquivos\obj\Debug\net9.0\APIArquivos.pdb
 C:\Users\Aluno\Downloads\APIArquivos\APIArquivos\APIArquivos\obj\Debug\net9.0\APIArquivos.genruntimeconfig.cache
 C:\Users\Aluno\Downloads\APIArquivos\APIArquivos\APIArquivos\obj\Debug\net9.0\ref\APIArquivos.dll
+C:\Users\arthu\Downloads\trabalho LP1\APIArquivos\APIArquivos\obj\Debug\net9.0\APIArquivos.dll
+C:\Users\arthu\Downloads\trabalho LP1\APIArquivos\APIArquivos\obj\Debug\net9.0\refint\APIArquivos.dll
+C:\Users\arthu\Downloads\trabalho LP1\APIArquivos\APIArquivos\obj\Debug\net9.0\APIArquivos.xml
+C:\Users\arthu\Downloads\trabalho LP1\APIArquivos\APIArquivos\obj\Debug\net9.0\APIArquivos.pdb
