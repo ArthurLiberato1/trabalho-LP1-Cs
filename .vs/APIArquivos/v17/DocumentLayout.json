@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Aluno\\Downloads\\APIArquivos\\APIArquivos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8C959684-3DDD-48A4-B0AE-D19CC9446025}|ArquivosLibrary\\ArquivosLibrary.csproj|c:\\users\\aluno\\downloads\\apiarquivos\\apiarquivos\\arquivoslibrary\\services\\alunosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C959684-3DDD-48A4-B0AE-D19CC9446025}|ArquivosLibrary\\ArquivosLibrary.csproj|solutionrelative:arquivoslibrary\\services\\alunosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C959684-3DDD-48A4-B0AE-D19CC9446025}|ArquivosLibrary\\ArquivosLibrary.csproj|c:\\users\\aluno\\downloads\\apiarquivos\\apiarquivos\\arquivoslibrary\\repository\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C959684-3DDD-48A4-B0AE-D19CC9446025}|ArquivosLibrary\\ArquivosLibrary.csproj|solutionrelative:arquivoslibrary\\repository\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6ED0BC35-0439-4E7A-ADAA-D6412EE2179F}|APIArquivos\\APIArquivos.csproj|c:\\users\\aluno\\downloads\\apiarquivos\\apiarquivos\\apiarquivos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6ED0BC35-0439-4E7A-ADAA-D6412EE2179F}|APIArquivos\\APIArquivos.csproj|solutionrelative:apiarquivos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6ED0BC35-0439-4E7A-ADAA-D6412EE2179F}|APIArquivos\\APIArquivos.csproj|c:\\users\\aluno\\downloads\\apiarquivos\\apiarquivos\\apiarquivos\\controllers\\alunoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6ED0BC35-0439-4E7A-ADAA-D6412EE2179F}|APIArquivos\\APIArquivos.csproj|solutionrelative:apiarquivos\\controllers\\alunoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6ED0BC35-0439-4E7A-ADAA-D6412EE2179F}|APIArquivos\\APIArquivos.csproj|c:\\users\\aluno\\downloads\\apiarquivos\\apiarquivos\\apiarquivos\\dtos\\alunos\\alunocriarrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6ED0BC35-0439-4E7A-ADAA-D6412EE2179F}|APIArquivos\\APIArquivos.csproj|solutionrelative:apiarquivos\\dtos\\alunos\\alunocriarrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C959684-3DDD-48A4-B0AE-D19CC9446025}|ArquivosLibrary\\ArquivosLibrary.csproj|c:\\users\\aluno\\downloads\\apiarquivos\\apiarquivos\\arquivoslibrary\\repository\\alunosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C959684-3DDD-48A4-B0AE-D19CC9446025}|ArquivosLibrary\\ArquivosLibrary.csproj|solutionrelative:arquivoslibrary\\repository\\alunosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6ED0BC35-0439-4E7A-ADAA-D6412EE2179F}|APIArquivos\\APIArquivos.csproj|c:\\users\\aluno\\downloads\\apiarquivos\\apiarquivos\\apiarquivos\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6ED0BC35-0439-4E7A-ADAA-D6412EE2179F}|APIArquivos\\APIArquivos.csproj|solutionrelative:apiarquivos\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno\\Downloads\\APIArquivos\\APIArquivos\\ArquivosLibrary\\Repository\\DbContext.cs",
+              "RelativeDocumentMoniker": "ArquivosLibrary\\Repository\\DbContext.cs",
+              "ToolTip": "C:\\Users\\Aluno\\Downloads\\APIArquivos\\APIArquivos\\ArquivosLibrary\\Repository\\DbContext.cs",
+              "RelativeToolTip": "ArquivosLibrary\\Repository\\DbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T00:42:14.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AlunosController.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno\\Downloads\\APIArquivos\\APIArquivos\\APIArquivos\\Controllers\\AlunosController.cs",
+              "RelativeDocumentMoniker": "APIArquivos\\Controllers\\AlunosController.cs",
+              "ToolTip": "C:\\Users\\Aluno\\Downloads\\APIArquivos\\APIArquivos\\APIArquivos\\Controllers\\AlunosController.cs",
+              "RelativeToolTip": "APIArquivos\\Controllers\\AlunosController.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAcwHUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T00:17:22.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AlunosRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno\\Downloads\\APIArquivos\\APIArquivos\\ArquivosLibrary\\Repository\\AlunosRepository.cs",
+              "RelativeDocumentMoniker": "ArquivosLibrary\\Repository\\AlunosRepository.cs",
+              "ToolTip": "C:\\Users\\Aluno\\Downloads\\APIArquivos\\APIArquivos\\ArquivosLibrary\\Repository\\AlunosRepository.cs",
+              "RelativeToolTip": "ArquivosLibrary\\Repository\\AlunosRepository.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAiwAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T00:42:25.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno\\Downloads\\APIArquivos\\APIArquivos\\APIArquivos\\Program.cs",
+              "RelativeDocumentMoniker": "APIArquivos\\Program.cs",
+              "ToolTip": "C:\\Users\\Aluno\\Downloads\\APIArquivos\\APIArquivos\\APIArquivos\\Program.cs",
+              "RelativeToolTip": "APIArquivos\\Program.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAACkAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T00:22:24.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AlunosService.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno\\Downloads\\APIArquivos\\APIArquivos\\ArquivosLibrary\\Services\\AlunosService.cs",
+              "RelativeDocumentMoniker": "ArquivosLibrary\\Services\\AlunosService.cs",
+              "ToolTip": "C:\\Users\\Aluno\\Downloads\\APIArquivos\\APIArquivos\\ArquivosLibrary\\Services\\AlunosService.cs",
+              "RelativeToolTip": "ArquivosLibrary\\Services\\AlunosService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T00:10:39.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AlunoCriarRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno\\Downloads\\APIArquivos\\APIArquivos\\APIArquivos\\DTOs\\Alunos\\AlunoCriarRequest.cs",
+              "RelativeDocumentMoniker": "APIArquivos\\DTOs\\Alunos\\AlunoCriarRequest.cs",
+              "ToolTip": "C:\\Users\\Aluno\\Downloads\\APIArquivos\\APIArquivos\\APIArquivos\\DTOs\\Alunos\\AlunoCriarRequest.cs",
+              "RelativeToolTip": "APIArquivos\\DTOs\\Alunos\\AlunoCriarRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T00:54:35.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Aluno\\Downloads\\APIArquivos\\APIArquivos\\APIArquivos\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "APIArquivos\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Aluno\\Downloads\\APIArquivos\\APIArquivos\\APIArquivos\\appsettings.Development.json",
+              "RelativeToolTip": "APIArquivos\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-11T00:45:58.871Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
