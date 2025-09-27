@@ -11,27 +11,34 @@ namespace ArquivosLibrary.Repository
     {
         private readonly DbContext _dbContext;
 
+        public CidadeRepository(DbContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
+
+
         public async Task<bool> AdicionarAsync(Cidade cidade)
         {
             try
             {
                 await using var con = await _dbContext.GetConnectionAsync();
                 await using var cmd = con.CreateCommand();
-
-                cmd.CommandText = "insert into Cidade (CidadeId, Nome, Sigla, IBGEMunicipio,Latitude, Longitude) values (@CidadeId, @Nome, @Sigla, @IBGEMunicipio, @Latitude, @Longitude)";
+                int x = -1;
+                cmd.CommandText = "insert into aluno1.Cidade (CidadeId, Nome, Sigla, IBGEMunicipio,Latitude, Longitude) values (@CidadeId, @Nome, @Sigla, @IBGEMunicipio, @Latitude, @Longitude)";
                 cmd.Parameters.AddWithValue("@CidadeId", cidade.CidadeId);
+                //adicionar verificação para quando a stirng não tiver ""
                 cmd.Parameters.AddWithValue("@Nome", cidade.Nome);
                 cmd.Parameters.AddWithValue("@Sigla", cidade.Sigla);
                 cmd.Parameters.AddWithValue("@IBGEMunicipio", cidade.IBGEMunicipio);
                 cmd.Parameters.AddWithValue("@Latitude", cidade.Latitude);
                 cmd.Parameters.AddWithValue("@Longitude", cidade.Longitude);
-                await cmd.ExecuteNonQueryAsync();
+                await cmd.ExecuteNonQueryAsync();//erro aqui apontado no debug
 
                 return true;
             }
             catch (Exception ex)
             {
-                throw;
+                throw new ArgumentException($"Erro ao adicionar Cidade: {cidade.Nome}");
             }
         }
 
@@ -39,7 +46,7 @@ namespace ArquivosLibrary.Repository
         {
             try
             {
-                List<Cidade> cidades= new List<Cidade>();
+                List<Cidade> cidades = new List<Cidade>();
 
                 await using var con = await _dbContext.GetConnectionAsync();
                 await using var cmd = con.CreateCommand();
@@ -53,7 +60,7 @@ namespace ArquivosLibrary.Repository
                     cidade.CidadeId = (int)dr["CidadeId"];
                     cidade.Nome = dr["Nome"].ToString();
                     cidade.Sigla = dr["Sigla"].ToString();
-                    cidade.IBGEMunicipio = (int) dr["IBGEMunicipio"];
+                    cidade.IBGEMunicipio = (int)dr["IBGEMunicipio"];
                     cidade.Longitude = dr["Longitude"].ToString();
                     cidade.Latitude = dr["Latitude"].ToString();
 
@@ -80,7 +87,7 @@ namespace ArquivosLibrary.Repository
 
                 await using var dr = await cmd.ExecuteReaderAsync();
 
-                while(await dr.ReadAsync())
+                while (await dr.ReadAsync())
                 {
                     UFs.Add(dr["Sigla"].ToString());
                 }
@@ -110,7 +117,7 @@ namespace ArquivosLibrary.Repository
                     cidade = new Cidade();
                     cidade.CidadeId = (int)dr["CidadeId"];
                     cidade.Nome = dr["Nome"].ToString();
-                    cidade.IBGEMunicipio = (int) dr["IBGEMunicipio"];
+                    cidade.IBGEMunicipio = (int)dr["IBGEMunicipio"];
                     cidade.Sigla = dr["Sigla"].ToString();
                     cidade.Latitude = dr["Latitude"].ToString();
                     cidade.Longitude = dr["Longitude"].ToString();
@@ -124,7 +131,7 @@ namespace ArquivosLibrary.Repository
             }
         }
 
-        public async Task<Cidade?> ObterCidadesPorUfAsync(string Sigla)
+        public async Task<IEnumerable<Cidade>> ObterCidadesPorUfAsync(string Sigla)
         {
             try
             {

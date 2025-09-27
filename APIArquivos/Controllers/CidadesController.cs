@@ -107,20 +107,26 @@ namespace APIArquivos.Controllers
         [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> ObterCidadePorUf(string uf)
+        public async Task<IActionResult> ObterCidadesPorUf(string uf)
         {
             try
             {
-                var cidade = await _cidadesService.ObterCidadePorUfAsync(uf);
-                if (cidade == null)
+                List<CidadeObterResponse> cidadesResponse = new List<CidadeObterResponse>();
+                var cidades = await _cidadesService.ObterCidadesPorUfAsync(uf);
+                if (cidades == null)
                     return NotFound($"Não foi possível encontrar nenhuma cidade no estado: {uf}.");
-                CidadeObterResponse cidadeObterResponse = new CidadeObterResponse
+                foreach (var cidade in cidades)
                 {
-                    CidadeId = cidade.CidadeId,
-                    Nome = cidade.Nome,
-                    Sigla = cidade.Sigla
-                };
-                return Ok(cidadeObterResponse);
+                    CidadeObterResponse cidadeObterResponse = new CidadeObterResponse
+                    {
+                        CidadeId = cidade.CidadeId,
+                        Nome = cidade.Nome,
+                        Sigla = cidade.Sigla
+                    };
+                    cidadesResponse.Add(cidadeObterResponse);
+                }
+
+                return Ok(cidadesResponse);
             }
             catch (Exception ex)
             {
@@ -150,20 +156,20 @@ namespace APIArquivos.Controllers
             {
                 try
                 {
-                    var importacaoBemSucedida = await _cidadesService.ImportarCidadesAsync(stream);
+                    var importacao = await _cidadesService.ImportarCidadesAsync(stream);
 
-                    if (importacaoBemSucedida)
+                    if (importacao)
                     {
-                        return Ok("Arquivo CSV processado com sucesso!");
+                        return Ok($"Arquivo ${arquivo.Name} processado com sucesso!");
                     }
                     else
                     {
-                        return BadRequest("Ocorreu um erro ao processar o arquivo.");
+                        return BadRequest($"Ocorreu um erro ao processar o arquivo: ${arquivo.Name}");
                     }
                 }
                 catch (ArgumentException ex)
                 {
-                    return BadRequest($"Erro na importação");
+                    return BadRequest($"Erro na importação do arquivo: {arquivo.FileName}");
                 }
             }
         }
