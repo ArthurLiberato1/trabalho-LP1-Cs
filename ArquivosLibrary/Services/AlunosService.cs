@@ -3,7 +3,7 @@ using ArquivosLibrary.Repository;
 
 namespace ArquivosLibrary.Services
 {
-    public  class AlunosService
+    public class AlunosService
     {
         private readonly AlunosRepository _alunosRepository;
 
@@ -12,7 +12,6 @@ namespace ArquivosLibrary.Services
         {
             _alunosRepository = alunosRepository;
         }
-
 
         public async Task<bool> AdicionarAlunoAsync(Aluno aluno)
         {

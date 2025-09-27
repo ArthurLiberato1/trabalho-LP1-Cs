@@ -13,7 +13,7 @@ namespace ArquivosLibrary.Services
         /*Injeção de dependência*/
         private readonly CidadeRepository _cidadesRepository;
 
-        public  CidadesService(CidadeRepository cidadesRepository)
+        public CidadesService(CidadeRepository cidadesRepository)
         {
             _cidadesRepository = cidadesRepository;
         }
@@ -21,28 +21,28 @@ namespace ArquivosLibrary.Services
 
         public async Task<bool> ImportarCidadesAsync(Stream arquivo)
         {
-            //adicionar verificação do tipo de arquivo
             try
             {
                 var reader = new StreamReader(arquivo);
+                reader.ReadLine();
                 while (!reader.EndOfStream)
                 {
-                    var linha=reader.ReadLine();
-                    if(string.IsNullOrEmpty(linha))
+                    var linha = reader.ReadLine();
+                    if (string.IsNullOrEmpty(linha))
                         throw new ArgumentException("Erro ao ler a linha do arquivo.");
-                        
+
                     var colunas = linha.Split(',');
                     var cidade = new Cidade
                     {
                         CidadeId = int.Parse(colunas[0]),
-                        Nome=colunas[1],
-                        Sigla=colunas[2],
+                        Nome = colunas[1],
+                        Sigla = colunas[2],
                         IBGEMunicipio = int.Parse(colunas[3]),
-                        Latitude=colunas[4],
-                        Longitude=colunas[5],
+                        Latitude = colunas[4],
+                        Longitude = colunas[5],
                     };
-                    var inseriu= await _cidadesRepository.AdicionarAsync(cidade);
-                    if(!inseriu)
+                    var inseriu = await _cidadesRepository.AdicionarAsync(cidade);
+                    if (!inseriu)
                         throw new ArgumentException($"Falha ao ler a cidade {cidade.Nome}.");
                 }
                 return true;
@@ -68,7 +68,7 @@ namespace ArquivosLibrary.Services
             return await _cidadesRepository.ObterTodosUF();
         }
 
-        public async Task<Cidade?> ObterCidadePorUfAsync(string uf)
+        public async Task<IEnumerable<Cidade>> ObterCidadesPorUfAsync(string uf)
         {
             return await _cidadesRepository.ObterCidadesPorUfAsync(uf);
         }
