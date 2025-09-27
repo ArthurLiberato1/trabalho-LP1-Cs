@@ -3,36 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\arthu\\Downloads\\trabalho LP1\\APIArquivos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6ED0BC35-0439-4E7A-ADAA-D6412EE2179F}|APIArquivos\\APIArquivos.csproj|c:\\users\\arthu\\downloads\\trabalho lp1\\apiarquivos\\apiarquivos\\controllers\\cidadescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6ED0BC35-0439-4E7A-ADAA-D6412EE2179F}|APIArquivos\\APIArquivos.csproj|solutionrelative:apiarquivos\\controllers\\cidadescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C959684-3DDD-48A4-B0AE-D19CC9446025}|ArquivosLibrary\\ArquivosLibrary.csproj|c:\\users\\arthu\\downloads\\trabalho lp1\\apiarquivos\\arquivoslibrary\\repository\\cidaderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C959684-3DDD-48A4-B0AE-D19CC9446025}|ArquivosLibrary\\ArquivosLibrary.csproj|solutionrelative:arquivoslibrary\\repository\\cidaderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C959684-3DDD-48A4-B0AE-D19CC9446025}|ArquivosLibrary\\ArquivosLibrary.csproj|c:\\users\\arthu\\downloads\\trabalho lp1\\apiarquivos\\arquivoslibrary\\repository\\alunosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C959684-3DDD-48A4-B0AE-D19CC9446025}|ArquivosLibrary\\ArquivosLibrary.csproj|solutionrelative:arquivoslibrary\\repository\\alunosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C959684-3DDD-48A4-B0AE-D19CC9446025}|ArquivosLibrary\\ArquivosLibrary.csproj|c:\\users\\arthu\\downloads\\trabalho lp1\\apiarquivos\\arquivoslibrary\\services\\alunosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C959684-3DDD-48A4-B0AE-D19CC9446025}|ArquivosLibrary\\ArquivosLibrary.csproj|solutionrelative:arquivoslibrary\\services\\alunosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C959684-3DDD-48A4-B0AE-D19CC9446025}|ArquivosLibrary\\ArquivosLibrary.csproj|c:\\users\\arthu\\downloads\\trabalho lp1\\apiarquivos\\arquivoslibrary\\entidades\\aluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C959684-3DDD-48A4-B0AE-D19CC9446025}|ArquivosLibrary\\ArquivosLibrary.csproj|solutionrelative:arquivoslibrary\\entidades\\aluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6ED0BC35-0439-4E7A-ADAA-D6412EE2179F}|APIArquivos\\APIArquivos.csproj|c:\\users\\arthu\\downloads\\trabalho lp1\\apiarquivos\\apiarquivos\\controllers\\alunoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6ED0BC35-0439-4E7A-ADAA-D6412EE2179F}|APIArquivos\\APIArquivos.csproj|solutionrelative:apiarquivos\\controllers\\alunoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6ED0BC35-0439-4E7A-ADAA-D6412EE2179F}|APIArquivos\\APIArquivos.csproj|c:\\users\\arthu\\downloads\\trabalho lp1\\apiarquivos\\apiarquivos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6ED0BC35-0439-4E7A-ADAA-D6412EE2179F}|APIArquivos\\APIArquivos.csproj|solutionrelative:apiarquivos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C959684-3DDD-48A4-B0AE-D19CC9446025}|ArquivosLibrary\\ArquivosLibrary.csproj|c:\\users\\arthu\\downloads\\trabalho lp1\\apiarquivos\\arquivoslibrary\\services\\cidadesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C959684-3DDD-48A4-B0AE-D19CC9446025}|ArquivosLibrary\\ArquivosLibrary.csproj|solutionrelative:arquivoslibrary\\services\\cidadesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,110 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AlunosRepository.cs",
-              "DocumentMoniker": "C:\\Users\\arthu\\Downloads\\trabalho LP1\\APIArquivos\\ArquivosLibrary\\Repository\\AlunosRepository.cs",
-              "RelativeDocumentMoniker": "ArquivosLibrary\\Repository\\AlunosRepository.cs",
-              "ToolTip": "C:\\Users\\arthu\\Downloads\\trabalho LP1\\APIArquivos\\ArquivosLibrary\\Repository\\AlunosRepository.cs",
-              "RelativeToolTip": "ArquivosLibrary\\Repository\\AlunosRepository.cs",
-              "ViewState": "AgIAAH0AAAAAAAAAAAAswIQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T13:49:24.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AlunosService.cs",
-              "DocumentMoniker": "C:\\Users\\arthu\\Downloads\\trabalho LP1\\APIArquivos\\ArquivosLibrary\\Services\\AlunosService.cs",
-              "RelativeDocumentMoniker": "ArquivosLibrary\\Services\\AlunosService.cs",
-              "ToolTip": "C:\\Users\\arthu\\Downloads\\trabalho LP1\\APIArquivos\\ArquivosLibrary\\Services\\AlunosService.cs",
-              "RelativeToolTip": "ArquivosLibrary\\Services\\AlunosService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T13:49:20.864Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Aluno.cs",
-              "DocumentMoniker": "C:\\Users\\arthu\\Downloads\\trabalho LP1\\APIArquivos\\ArquivosLibrary\\Entidades\\Aluno.cs",
-              "RelativeDocumentMoniker": "ArquivosLibrary\\Entidades\\Aluno.cs",
-              "ToolTip": "C:\\Users\\arthu\\Downloads\\trabalho LP1\\APIArquivos\\ArquivosLibrary\\Entidades\\Aluno.cs",
-              "RelativeToolTip": "ArquivosLibrary\\Entidades\\Aluno.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T13:49:04.622Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "AlunosController.cs",
               "DocumentMoniker": "C:\\Users\\arthu\\Downloads\\trabalho LP1\\APIArquivos\\APIArquivos\\Controllers\\AlunosController.cs",
               "RelativeDocumentMoniker": "APIArquivos\\Controllers\\AlunosController.cs",
               "ToolTip": "C:\\Users\\arthu\\Downloads\\trabalho LP1\\APIArquivos\\APIArquivos\\Controllers\\AlunosController.cs",
               "RelativeToolTip": "APIArquivos\\Controllers\\AlunosController.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAA7wIQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAmwDMAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T13:39:39.493Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CidadesService.cs",
-              "DocumentMoniker": "C:\\Users\\arthu\\Downloads\\trabalho LP1\\APIArquivos\\ArquivosLibrary\\Services\\CidadesService.cs",
-              "RelativeDocumentMoniker": "ArquivosLibrary\\Services\\CidadesService.cs",
-              "ToolTip": "C:\\Users\\arthu\\Downloads\\trabalho LP1\\APIArquivos\\ArquivosLibrary\\Services\\CidadesService.cs",
-              "RelativeToolTip": "ArquivosLibrary\\Services\\CidadesService.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAIAzwCEAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T12:28:15.961Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CidadeRepository.cs",
-              "DocumentMoniker": "C:\\Users\\arthu\\Downloads\\trabalho LP1\\APIArquivos\\ArquivosLibrary\\Repository\\CidadeRepository.cs",
-              "RelativeDocumentMoniker": "ArquivosLibrary\\Repository\\CidadeRepository.cs",
-              "ToolTip": "C:\\Users\\arthu\\Downloads\\trabalho LP1\\APIArquivos\\ArquivosLibrary\\Repository\\CidadeRepository.cs*",
-              "RelativeToolTip": "ArquivosLibrary\\Repository\\CidadeRepository.cs*",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAAAIgAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T12:21:11.134Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\arthu\\Downloads\\trabalho LP1\\APIArquivos\\APIArquivos\\Program.cs",
-              "RelativeDocumentMoniker": "APIArquivos\\Program.cs",
-              "ToolTip": "C:\\Users\\arthu\\Downloads\\trabalho LP1\\APIArquivos\\APIArquivos\\Program.cs",
-              "RelativeToolTip": "APIArquivos\\Program.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T11:57:45.424Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CidadesController.cs",
-              "DocumentMoniker": "C:\\Users\\arthu\\Downloads\\trabalho LP1\\APIArquivos\\APIArquivos\\Controllers\\CidadesController.cs",
-              "RelativeDocumentMoniker": "APIArquivos\\Controllers\\CidadesController.cs",
-              "ToolTip": "C:\\Users\\arthu\\Downloads\\trabalho LP1\\APIArquivos\\APIArquivos\\Controllers\\CidadesController.cs",
-              "RelativeToolTip": "APIArquivos\\Controllers\\CidadesController.cs",
-              "ViewState": "AgIAAIcAAAAAAAAAAAAAAJMAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T11:57:21.495Z",
+              "WhenOpened": "2025-09-27T14:08:47.461Z",
               "EditorCaption": ""
             }
           ]

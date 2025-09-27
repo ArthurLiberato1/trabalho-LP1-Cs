@@ -16,12 +16,51 @@ namespace APIArquivos.Controllers
     {
 
         private readonly AlunosService _alunosService;
+        private readonly string _caminhoUpload;
 
         public AlunosController(AlunosService alunosService)
         {
             _alunosService = alunosService;
+            // Pasta de uploads na raiz do projeto
+            _caminhoUpload = Path.Combine(Directory.GetCurrentDirectory(), "uploads");
+
+            if (!Directory.Exists(_caminhoUpload))
+                Directory.CreateDirectory(_caminhoUpload);
         }
 
+
+        [HttpPost("{id}/foto")]
+        public async Task<IActionResult> SalvarFotoAluno(int id, IFormFile arquivo)
+        {
+            if (arquivo == null || arquivo.Length == 0)
+                return BadRequest("Nenhum arquivo enviado.");
+            if (Path.GetExtension(arquivo.FileName).ToLower() != ".png" && Path.GetExtension(arquivo.FileName).ToLower() != ".jpg" && Path.GetExtension(arquivo.FileName).ToLower() != ".jpeg")
+                return BadRequest("Tipo de arquivo inválido. Por favor, envie um arquivo de imagem válido! (.png, .jpeg, .jpg)");
+            var extensao = Path.GetExtension(arquivo.FileName);
+            var nomeArquivo = $"{id}{extensao}";
+            var caminhoArquivo = Path.Combine(_caminhoUpload, nomeArquivo);
+            using (var stream = new FileStream(caminhoArquivo, FileMode.Create))
+            {
+                await arquivo.CopyToAsync(stream);
+            }
+
+            return Ok(new { mensagem = "Foto salva com sucesso!", nomeArquivo });
+
+        }
+
+        // --- Retorna foto em Base64 ---
+        [HttpGet("{id}/foto")]
+        public async Task <IActionResult> GetFoto(int id)
+        {
+            var arquivos = Directory.GetFiles(_caminhoUpload, $"{id}.*");
+            if (arquivos.Length == 0)
+                return NotFound($"Foto do aluno {id} não encontrada.");
+
+            var bytes = System.IO.File.ReadAllBytes(arquivos[0]);
+            var base64 = Convert.ToBase64String(bytes);
+
+            return Ok(new { id, fotoBase64 = base64 });
+        }
 
         [HttpPost]
         [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
