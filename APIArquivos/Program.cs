@@ -44,6 +44,9 @@ Environment.SetEnvironmentVariable("STRING_CONEXAO", builder.Configuration["Stri
 
 builder.Services.AddScoped<AlunosRepository>();
 builder.Services.AddScoped<AlunosService>();
+//tem que adicionar no program.cs os repositórios e serviços 
+builder.Services.AddScoped<CidadeRepository>();
+builder.Services.AddScoped<CidadesService>();
 
 DbContext dbContext = new DbContext();
 builder.Services.AddSingleton(dbContext);

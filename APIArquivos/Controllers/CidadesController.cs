@@ -113,8 +113,8 @@ namespace APIArquivos.Controllers
             {
                 List<CidadeObterResponse> cidadesResponse = new List<CidadeObterResponse>();
                 var cidades = await _cidadesService.ObterCidadesPorUfAsync(uf);
-                if (cidades == null)
-                    return NotFound($"Não foi possível encontrar nenhuma cidade no estado: {uf}.");
+                if (cidades.Count()==0 || cidades ==null)
+                    return NotFound($"Não foi possível encontrar nenhuma cidade no estado: {uf}!");
                 foreach (var cidade in cidades)
                 {
                     CidadeObterResponse cidadeObterResponse = new CidadeObterResponse
@@ -146,9 +146,9 @@ namespace APIArquivos.Controllers
             {
                 return BadRequest("Nenhum arquivo foi enviado.");
             }
-            if (arquivo.ContentType != "text/csv")
+            if (Path.GetExtension(arquivo.FileName).ToLower() != ".csv")
             {
-                return BadRequest("Tipo de arquivo inválido. Por favor, envie um arquivo .csv.");
+                return BadRequest("Tipo de arquivo inválido. Por favor, envie um arquivo .csv!");
             }
 
 
@@ -160,11 +160,11 @@ namespace APIArquivos.Controllers
 
                     if (importacao)
                     {
-                        return Ok($"Arquivo ${arquivo.Name} processado com sucesso!");
+                        return Ok($"Arquivo {arquivo.Name} processado com sucesso!");
                     }
                     else
                     {
-                        return BadRequest($"Ocorreu um erro ao processar o arquivo: ${arquivo.Name}");
+                        return BadRequest($"Ocorreu um erro ao processar o arquivo: {arquivo.Name}");
                     }
                 }
                 catch (ArgumentException ex)

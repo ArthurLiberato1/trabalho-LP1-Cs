@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ArquivosLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1bf15c3c967719ab35b8ec00795befa45b9da47b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0bf130c733315da214a08596b497a5782ab3e9c")]
 [assembly: System.Reflection.AssemblyProductAttribute("ArquivosLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ArquivosLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

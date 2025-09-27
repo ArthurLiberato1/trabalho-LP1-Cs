@@ -31,7 +31,8 @@ namespace ArquivosLibrary.Services
                     if (string.IsNullOrEmpty(linha))
                         throw new ArgumentException("Erro ao ler a linha do arquivo.");
 
-                    var colunas = linha.Split(',');
+                    var colunas = linha.Split(',');//retorna vetor
+                    colunas[1] = colunas[1].Trim('\'', '"').Trim();
                     var cidade = new Cidade
                     {
                         CidadeId = int.Parse(colunas[0]),
@@ -70,7 +71,7 @@ namespace ArquivosLibrary.Services
 
         public async Task<IEnumerable<Cidade>> ObterCidadesPorUfAsync(string uf)
         {
-            return await _cidadesRepository.ObterCidadesPorUfAsync(uf);
+            return await _cidadesRepository.ObterCidadesPorUfAsync(uf.ToUpper());
         }
 
     }

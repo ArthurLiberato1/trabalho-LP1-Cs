@@ -1,4 +1,5 @@
 ﻿using ArquivosLibrary.Entidades;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,16 +24,14 @@ namespace ArquivosLibrary.Repository
             {
                 await using var con = await _dbContext.GetConnectionAsync();
                 await using var cmd = con.CreateCommand();
-                int x = -1;
                 cmd.CommandText = "insert into aluno1.Cidade (CidadeId, Nome, Sigla, IBGEMunicipio,Latitude, Longitude) values (@CidadeId, @Nome, @Sigla, @IBGEMunicipio, @Latitude, @Longitude)";
                 cmd.Parameters.AddWithValue("@CidadeId", cidade.CidadeId);
-                //adicionar verificação para quando a stirng não tiver ""
                 cmd.Parameters.AddWithValue("@Nome", cidade.Nome);
                 cmd.Parameters.AddWithValue("@Sigla", cidade.Sigla);
                 cmd.Parameters.AddWithValue("@IBGEMunicipio", cidade.IBGEMunicipio);
                 cmd.Parameters.AddWithValue("@Latitude", cidade.Latitude);
                 cmd.Parameters.AddWithValue("@Longitude", cidade.Longitude);
-                await cmd.ExecuteNonQueryAsync();//erro aqui apontado no debug
+                await cmd.ExecuteNonQueryAsync();
 
                 return true;
             }
@@ -50,7 +49,7 @@ namespace ArquivosLibrary.Repository
 
                 await using var con = await _dbContext.GetConnectionAsync();
                 await using var cmd = con.CreateCommand();
-                cmd.CommandText = "select * from Cidade";
+                cmd.CommandText = "select * from aluno1.Cidade";
 
                 await using var dr = await cmd.ExecuteReaderAsync();
 
@@ -83,7 +82,7 @@ namespace ArquivosLibrary.Repository
                 List<string> UFs = new List<string>();
                 await using var con = await _dbContext.GetConnectionAsync();
                 await using var cmd = con.CreateCommand();
-                cmd.CommandText = "select distinct Sigla from Cidade";
+                cmd.CommandText = "select distinct Sigla from aluno1.Cidade";
 
                 await using var dr = await cmd.ExecuteReaderAsync();
 
@@ -108,7 +107,7 @@ namespace ArquivosLibrary.Repository
 
                 await using var con = await _dbContext.GetConnectionAsync();
                 await using var cmd = con.CreateCommand();
-                cmd.CommandText = "select * from Cidade where CidadeId = " + cidadeId;
+                cmd.CommandText = "select * from aluno1.Cidade where CidadeId = " + cidadeId;
 
                 await using var dr = await cmd.ExecuteReaderAsync();
 
@@ -131,6 +130,46 @@ namespace ArquivosLibrary.Repository
             }
         }
 
+        public async Task<bool> AdicionarLoteAsync(List<Cidade> cidades)
+        {
+            try
+            {
+                await using var con = await _dbContext.GetConnectionAsync();
+                await using var cmd = con.CreateCommand();
+
+                cmd.CommandText = "insert into aluno1.Cidade (CidadeId, Nome, Sigla, IBGEMunicipio,Latitude, Longitude) values (@CidadeId, @Nome, @Sigla, @IBGEMunicipio, @Latitude, @Longitude)";
+
+                MySqlTransaction transaction = await con.BeginTransactionAsync();
+
+                try
+                {
+                    foreach (var cidade in cidades)
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@CidadeId", cidade.CidadeId);
+                        cmd.Parameters.AddWithValue("@Nome", cidade.Nome);
+                        cmd.Parameters.AddWithValue("@Sigla", cidade.Sigla);
+                        cmd.Parameters.AddWithValue("@IBGEMunicipio", cidade.IBGEMunicipio);
+                        cmd.Parameters.AddWithValue("@Latitude", cidade.Latitude);
+                        cmd.Parameters.AddWithValue("@Longitude", cidade.Longitude);
+
+                        int qtdeLinhas = await cmd.ExecuteNonQueryAsync();
+                    }
+                    await transaction.CommitAsync();
+                }
+                catch (Exception ex)
+                {
+                    await transaction.RollbackAsync();
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
         public async Task<IEnumerable<Cidade>> ObterCidadesPorUfAsync(string Sigla)
         {
             try
@@ -139,7 +178,7 @@ namespace ArquivosLibrary.Repository
 
                 await using var con = await _dbContext.GetConnectionAsync();
                 await using var cmd = con.CreateCommand();
-                cmd.CommandText = "select * from Cidade where Sigla = " + Sigla;
+                cmd.CommandText = "select * from aluno1.Cidade where Sigla = '" + Sigla + "'";
 
                 await using var dr = await cmd.ExecuteReaderAsync();
 
