@@ -34,3 +34,16 @@ C:\Users\Aluno\Downloads\APIArquivos\APIArquivos\ArquivosLibrary\obj\Debug\net9.
 C:\Users\Aluno\Downloads\APIArquivos\APIArquivos\ArquivosLibrary\obj\Debug\net9.0\refint\ArquivosLibrary.dll
 C:\Users\Aluno\Downloads\APIArquivos\APIArquivos\ArquivosLibrary\obj\Debug\net9.0\ArquivosLibrary.pdb
 C:\Users\Aluno\Downloads\APIArquivos\APIArquivos\ArquivosLibrary\obj\Debug\net9.0\ref\ArquivosLibrary.dll
+C:\Users\arthu\Downloads\trabalho LP1\APIArquivos\ArquivosLibrary\bin\Debug\net9.0\ArquivosLibrary.deps.json
+C:\Users\arthu\Downloads\trabalho LP1\APIArquivos\ArquivosLibrary\bin\Debug\net9.0\ArquivosLibrary.dll
+C:\Users\arthu\Downloads\trabalho LP1\APIArquivos\ArquivosLibrary\bin\Debug\net9.0\ArquivosLibrary.pdb
+C:\Users\arthu\Downloads\trabalho LP1\APIArquivos\ArquivosLibrary\obj\Debug\net9.0\ArquivosLibrary.csproj.AssemblyReference.cache
+C:\Users\arthu\Downloads\trabalho LP1\APIArquivos\ArquivosLibrary\obj\Debug\net9.0\ArquivosLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arthu\Downloads\trabalho LP1\APIArquivos\ArquivosLibrary\obj\Debug\net9.0\ArquivosLibrary.AssemblyInfoInputs.cache
+C:\Users\arthu\Downloads\trabalho LP1\APIArquivos\ArquivosLibrary\obj\Debug\net9.0\ArquivosLibrary.AssemblyInfo.cs
+C:\Users\arthu\Downloads\trabalho LP1\APIArquivos\ArquivosLibrary\obj\Debug\net9.0\ArquivosLibrary.csproj.CoreCompileInputs.cache
+C:\Users\arthu\Downloads\trabalho LP1\APIArquivos\ArquivosLibrary\obj\Debug\net9.0\ArquivosLibrary.sourcelink.json
+C:\Users\arthu\Downloads\trabalho LP1\APIArquivos\ArquivosLibrary\obj\Debug\net9.0\ArquivosLibrary.dll
+C:\Users\arthu\Downloads\trabalho LP1\APIArquivos\ArquivosLibrary\obj\Debug\net9.0\refint\ArquivosLibrary.dll
+C:\Users\arthu\Downloads\trabalho LP1\APIArquivos\ArquivosLibrary\obj\Debug\net9.0\ArquivosLibrary.pdb
+C:\Users\arthu\Downloads\trabalho LP1\APIArquivos\ArquivosLibrary\obj\Debug\net9.0\ref\ArquivosLibrary.dll
