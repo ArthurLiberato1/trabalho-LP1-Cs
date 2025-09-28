@@ -17,7 +17,7 @@ namespace APIArquivos.Controllers
 
         private readonly AlunosService _alunosService;
         private readonly string _caminhoUpload;
-
+        
         public AlunosController(AlunosService alunosService)
         {
             _alunosService = alunosService;
@@ -28,7 +28,12 @@ namespace APIArquivos.Controllers
                 Directory.CreateDirectory(_caminhoUpload);
         }
 
-
+        /// <summary>
+        /// recebe o código do aluno e sua respectiva foto (que é armazenada).
+        /// </summary>
+        /// <param name="id"> Id do aluno a quem pertence a foto</param>
+        /// <param name="arquivo"> Arquivo da imagem do aluno (.png, .jpeg, .jpg)</param>
+        /// <returns></returns>
         [HttpPost("{id}/foto")]
         public async Task<IActionResult> SalvarFotoAluno(int id, IFormFile arquivo)
         {
@@ -36,6 +41,9 @@ namespace APIArquivos.Controllers
                 return BadRequest("Nenhum arquivo enviado.");
             if (Path.GetExtension(arquivo.FileName).ToLower() != ".png" && Path.GetExtension(arquivo.FileName).ToLower() != ".jpg" && Path.GetExtension(arquivo.FileName).ToLower() != ".jpeg")
                 return BadRequest("Tipo de arquivo inválido. Por favor, envie um arquivo de imagem válido! (.png, .jpeg, .jpg)");
+            var aluno = await _alunosService.ObterAlunoPorIdAsync(id);
+            if (aluno == null)
+                return NotFound($"Não foi possível encontrar o aluno de id: {id}");
             var extensao = Path.GetExtension(arquivo.FileName);
             var nomeArquivo = $"{id}{extensao}";
             var caminhoArquivo = Path.Combine(_caminhoUpload, nomeArquivo);
@@ -47,11 +55,17 @@ namespace APIArquivos.Controllers
             return Ok(new { mensagem = "Foto salva com sucesso!", nomeArquivo });
 
         }
-
-        // --- Retorna foto em Base64 ---
+        /// <summary>
+        /// Retorna a foto em Base64.
+        /// </summary>
+        /// <param name="id"> Id do aluno para retornar a foto</param>
+        /// <returns></returns>
         [HttpGet("{id}/foto")]
         public async Task <IActionResult> GetFoto(int id)
         {
+            var aluno = await _alunosService.ObterAlunoPorIdAsync(id);
+            if(aluno==null)
+                return NotFound($"Aluno {id} não encontrado.");
             var arquivos = Directory.GetFiles(_caminhoUpload, $"{id}.*");
             if (arquivos.Length == 0)
                 return NotFound($"Foto do aluno {id} não encontrada.");
