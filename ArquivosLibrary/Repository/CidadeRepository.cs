@@ -130,6 +130,45 @@ namespace ArquivosLibrary.Repository
             }
         }
 
+        public async Task<bool> AlterarCidadeAsync(int id, Cidade cidade)
+        {
+            try {
+            
+                await using var con = await _dbContext.GetConnectionAsync();
+                await using var cmd = con.CreateCommand();
+                cmd.CommandText = "update aluno1.Cidade set Nome=@Nome, Sigla=@Sigla, IBGEMunicipio=@IBGEMunicipio, Latitude=@Latitude, Longitude=@Longitude where CidadeId=" + id;
+                cmd.Parameters.AddWithValue("@Nome", cidade.Nome);
+                cmd.Parameters.AddWithValue("@Sigla", cidade.Sigla);
+                cmd.Parameters.AddWithValue("@IBGEMunicipio", cidade.IBGEMunicipio);
+                cmd.Parameters.AddWithValue("@Latitude", cidade.Latitude);
+                cmd.Parameters.AddWithValue("@Longitude", cidade.Longitude);
+                await cmd.ExecuteNonQueryAsync();
+                return true;
+            }
+            catch
+            {
+                throw new ArgumentException($"Erro ao alterar Cidade: {cidade.Nome}");
+            }
+        }
+
+
+        public async Task<bool> RemoverCidadeAsync(int id)
+        {
+            try
+            {
+                await using var con = await _dbContext.GetConnectionAsync();
+                await using var cmd = con.CreateCommand();
+                cmd.CommandText = "delete from aluno1.Cidade where CidadeId=" + id;
+                await cmd.ExecuteNonQueryAsync();
+                return true;
+            }
+            catch
+            {
+                throw new ArgumentException($"Erro ao deletar Cidade: {id}");
+            }
+        }
+
+
         public async Task<bool> AdicionarLoteAsync(List<Cidade> cidades)
         {
             try

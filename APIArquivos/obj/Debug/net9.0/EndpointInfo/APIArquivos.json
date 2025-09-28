@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.4",
   "info": {
-    "title": "Gerenciamento da API...",
-    "description": "<h3>Título <b>da API</b></h3>\r\n                                      <p>\r\n                                          Alguma descrição....\r\n                                      </p>",
+    "title": "Trabalho Final 1º Bimestre - LP1",
+    "description": "<h3>API de <b>Cidades e Alunos</b></h3>\r\n                                      <p>\r\n                                          Arthur Liberato Eûgênio - 262318881\r\n                                      </p>",
     "contact": {
       "name": "Suporte Unoeste",
       "url": "https://www.unoeste.br",
@@ -16,10 +16,12 @@
         "tags": [
           "Alunos"
         ],
+        "summary": "recebe o código do aluno e sua respectiva foto (que é armazenada).",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Id do aluno a quem pertence a foto",
             "required": true,
             "schema": {
               "type": "integer",
@@ -35,6 +37,7 @@
                 "properties": {
                   "arquivo": {
                     "type": "string",
+                    "description": "Arquivo da imagem do aluno (.png, .jpeg, .jpg)",
                     "format": "binary"
                   }
                 }
@@ -57,10 +60,12 @@
         "tags": [
           "Alunos"
         ],
+        "summary": "Retorna a foto em Base64.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Id do aluno para retornar a foto",
             "required": true,
             "schema": {
               "type": "integer",
@@ -239,6 +244,7 @@
         "tags": [
           "Cidades"
         ],
+        "summary": "Obter todas as cidades.",
         "responses": {
           "200": {
             "description": "OK",
@@ -262,10 +268,12 @@
         "tags": [
           "Cidades"
         ],
+        "summary": "Retorna uma cidade pelo CidadeId.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Id da cidade a ser obtida.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -306,6 +314,7 @@
         "tags": [
           "Cidades"
         ],
+        "summary": "Retorna todas os estados.",
         "responses": {
           "200": {
             "description": "OK",
@@ -329,10 +338,12 @@
         "tags": [
           "Cidades"
         ],
+        "summary": "Retorna todas as cidades de um estado específico.",
         "parameters": [
           {
             "name": "uf",
             "in": "path",
+            "description": "UF do estado",
             "required": true,
             "schema": {
               "type": "string"
@@ -372,6 +383,7 @@
         "tags": [
           "Cidades"
         ],
+        "summary": "Receber o arquivo e importá-lo.",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -380,6 +392,7 @@
                 "properties": {
                   "arquivo": {
                     "type": "string",
+                    "description": "arquivo.csv a ser importado",
                     "format": "binary"
                   }
                 }

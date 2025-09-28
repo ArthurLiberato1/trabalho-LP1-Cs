@@ -6,7 +6,7 @@ namespace ArquivosLibrary.Repository
     public class AlunosRepository
     {
         private readonly DbContext _context;
-
+        
         public AlunosRepository(DbContext context)
         {
             _context = context;
@@ -18,7 +18,7 @@ namespace ArquivosLibrary.Repository
             {
                 await using var con = await _context.GetConnectionAsync();
                 await using var cmd = con.CreateCommand();
-                cmd.CommandText = "insert into Aluno (Nome, RA) values (@Nome, @RA)";
+                cmd.CommandText = "insert into aluno1.Aluno (Nome, RA) values (@Nome, @RA)";
                 cmd.Parameters.AddWithValue("@Nome", aluno.Nome);
                 cmd.Parameters.AddWithValue("@RA", aluno.RA);
                 await cmd.ExecuteNonQueryAsync();
@@ -38,7 +38,7 @@ namespace ArquivosLibrary.Repository
             {
                 await using var con = await _context.GetConnectionAsync();
                 await using var cmd = con.CreateCommand();
-                cmd.CommandText = "delete from Aluno where AlunoId = " + id;
+                cmd.CommandText = "delete from aluno1.Aluno where AlunoId = " + id;
                 int qtdeLinhas = await cmd.ExecuteNonQueryAsync();
 
                 return true;
@@ -57,7 +57,7 @@ namespace ArquivosLibrary.Repository
 
                 await using var con = await _context.GetConnectionAsync();
                 await using var cmd = con.CreateCommand();
-                cmd.CommandText = "select * from Aluno where AlunoId = " + alunoId;
+                cmd.CommandText = "select * from aluno1.Aluno where AlunoId = " + alunoId;
 
                 await using var dr = await cmd.ExecuteReaderAsync();
 
@@ -85,7 +85,7 @@ namespace ArquivosLibrary.Repository
 
                 await using var con = await _context.GetConnectionAsync();
                 await using var cmd = con.CreateCommand();
-                cmd.CommandText = "select * from Aluno";
+                cmd.CommandText = "select * from aluno1.Aluno";
 
                 await using var dr = await cmd.ExecuteReaderAsync();
 

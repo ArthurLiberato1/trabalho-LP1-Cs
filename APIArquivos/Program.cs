@@ -10,11 +10,11 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "Gerenciamento da API...",
+        Title = "Trabalho Final 1º Bimestre - LP1",
         Version = "v1",
-        Description = $@"<h3>Título <b>da API</b></h3>
+        Description = $@"<h3>API de <b>Cidades e Alunos</b></h3>
                                       <p>
-                                          Alguma descrição....
+                                          Arthur Liberato Eûgênio - 262318881
                                       </p>",
         Contact = new OpenApiContact
         {

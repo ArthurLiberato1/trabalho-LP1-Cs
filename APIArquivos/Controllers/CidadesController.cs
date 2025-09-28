@@ -19,7 +19,10 @@ namespace APIArquivos.Controllers
         }
         /*Injeção de dependência*/
 
-
+        /// <summary>
+        /// Obter todas as cidades.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -50,8 +53,62 @@ namespace APIArquivos.Controllers
                 return StatusCode(500, $"Erro interno: {ex.Message}");
             }
         }
+        /*
+        [HttpPut("/{id}")]
+        [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> AlterarCidadesAsync([FromRoute]int id,[FromBody] CidadeAlterarRequest request)
+        {
+            try
+            {
+                var cidade = new Cidade
+                {
+                    Nome = request.Nome,
+                    Sigla = request.Sigla,
+                    IBGEMunicipio = request.IBGEMunicipio,
+                    Latitude = request.Latitude,
+                    Longitude = request.Longitude
+                };
 
+                var alterou = await _cidadesService.AlterarCidadeAsync(id, cidade);
+                
+                if(!alterou)
+                    return NotFound($"Cidade {id} não encontrada para alteração.");
+                return Ok($"Cidade {id}, {cidade.Nome} alterada com sucesso!");
 
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Erro interno: {ex.Message}");
+            }
+        }
+
+        [HttpDelete("{id}")]
+        [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> DeletarCidadeAsync(int id)
+        {
+            try
+            {
+                var deletou = await _cidadesService.RemoverCidadeAsync(id);
+                if(!deletou)
+                    return NotFound($"Cidade {id} não encontrada para remoção.");
+                return Ok($"Cidade {id} removida com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Erro interno: {ex.Message}");
+            }
+
+        }*/
+
+        /// <summary>
+        /// Retorna uma cidade pelo CidadeId.
+        /// </summary>
+        /// <param name="id">Id da cidade a ser obtida.</param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -77,7 +134,10 @@ namespace APIArquivos.Controllers
             }
         }
 
-        //analisar melhor
+        /// <summary>
+        /// Retorna todas os estados.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("estados")]
         [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -102,7 +162,11 @@ namespace APIArquivos.Controllers
                 return StatusCode(500, $"Erro interno: {ex.Message}");
             }
         }
-
+        /// <summary>
+        /// Retorna todas as cidades de um estado específico.
+        /// </summary>
+        /// <param name="uf">UF do estado</param>
+        /// <returns></returns>
         [HttpGet("estado/{uf}")]
         [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -135,7 +199,11 @@ namespace APIArquivos.Controllers
         }
 
 
-
+        /// <summary>
+        /// Receber o arquivo e importá-lo.
+        /// </summary>
+        /// <param name="arquivo">arquivo.csv a ser importado</param>
+        /// <returns></returns>
         [HttpPost("importar")]
         [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -156,7 +224,7 @@ namespace APIArquivos.Controllers
             {
                 try
                 {
-                    var importacao = await _cidadesService.ImportarCidadesAsync(stream);
+                    var importacao = await _cidadesService.ImportarCidadesLoteAsync(stream);
 
                     if (importacao)
                     {
